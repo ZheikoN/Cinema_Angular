@@ -1,0 +1,31 @@
+<h2> movie list</h2>
+<div class="movies">
+<ul class="movies"></ul>
+<li *ngFor="let movie of movies">
+  <a routerLink="/detail/{{movie.id}}">
+    <span class="badge">{{ movie.id }}</span> {{movie.title}} {{movie.genre}}
+  </a>
+</li>
+
+<table *ngFor="let movie of movies">
+  <tr>
+    <td>{{ movie.year }}</td>
+    <td>{{ movie.title }}</td>
+    <td>{{ movie.genre }}</td>
+    <td>{{ movie.notes }}</td>
+    
+  </tr>
+</table>
+
+
+</div>
+
+<!-- <div *ngIf="selectedMovie">
+<h2>{{selectedMovie.name | uppercase}} Details</h2>
+<div><span>id: </span>{{selectedMovie.id}}</div>
+<div>
+  <label for="movie-name">Movie name: </label>
+  <input id="movie-name" [(ngModel)]="selectedMovie.name" placeholder="name">
+</div>
+</div> -->
+
